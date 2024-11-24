@@ -59,5 +59,8 @@ while True:
         case _:
             print("Invalid Input!")  
 
+mydb.close()
+
+
 
     
