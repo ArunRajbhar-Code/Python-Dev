@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        {%if first_name and last_name%}
+        Your First Name is {{first_name}}
+        Your Last Name is {{last_name}}
+        {% else %}
+        Please Enter your fName and lName
+        {%endif%}
+    </p>
+    <form method="POST">
+        {{form.hidden_tag()}}
+        {{form.first_name.label}}{{form.first_name}}
+        {{form.last_name.label}}{{form.last_name}}
+        {{form.submit}}
+    </form>
+</body>
+
+</html>
