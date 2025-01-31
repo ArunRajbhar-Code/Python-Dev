@@ -8,7 +8,7 @@ app.config['SECRET_KEY']="Mybcasciuasuc"
 
 class myform(FlaskForm):
     name=StringField("Type your name:",validators=[DataRequired()])
-    gender=RadioField('Gender:',choices=[('M','Male'),('F','Female')])
+    gender=RadioField('Gender:',choices=[('M','Male'),('F','Female'),('O','Other')])
     address=SelectField("Select your city:",choices=[('goa','Goa'),('mumbai','Mumbai'),('bengluru','Bengluru'),('varanasi','Varanasi')])
     feedback=TextAreaField("Please provide feed back")
     submit=SubmitField("Submit")

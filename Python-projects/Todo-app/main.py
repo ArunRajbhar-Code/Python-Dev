@@ -1,11 +1,10 @@
-import streamlit as st
-st.header("To Do App")
+from flask import Flask, render_template,redirect
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField
+app=Flask(__name__)
 
 
-with open("todo.txt","r") as file:
-    todos=file.readlines()
-for i in todos:
-    st.checkbox(i,key=i)    
-todo=st.text_input(label="Enter To Do" ,label_visibility="collapsed")    
-with open("todo.txt","a") as file:
-    file.write(todo+"\n")
+
+
+
+
